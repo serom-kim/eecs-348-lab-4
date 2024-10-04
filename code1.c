@@ -33,7 +33,7 @@ int main() {
         scanf("%d", &score);
 
         if (score <= 1) { //stopping the program if user chooses
-            printf('Program is stopping...');
+            printf("Program stopping.\n");
             break;
         }
 
