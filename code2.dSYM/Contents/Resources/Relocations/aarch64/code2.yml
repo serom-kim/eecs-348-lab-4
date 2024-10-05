@@ -2,13 +2,13 @@
 triple:          'arm64-apple-darwin'
 binary-path:     '/Users/seromkim/Desktop/EECS/eecs348labs/348_lab4/eecs-348-lab-4/code2'
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003698, symSize: 0x348 }
-  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003698, symSize: 0x348 }
-  - { offsetInCU: 0x93, offset: 0x93, size: 0x8, addend: 0x0, symName: _c_to_f, symObjAddr: 0x348, symBinAddr: 0x1000039E0, symSize: 0x38 }
-  - { offsetInCU: 0xBB, offset: 0xBB, size: 0x8, addend: 0x0, symName: _c_to_k, symObjAddr: 0x380, symBinAddr: 0x100003A18, symSize: 0x28 }
-  - { offsetInCU: 0xE3, offset: 0xE3, size: 0x8, addend: 0x0, symName: _f_to_c, symObjAddr: 0x3A8, symBinAddr: 0x100003A40, symSize: 0x38 }
-  - { offsetInCU: 0x10B, offset: 0x10B, size: 0x8, addend: 0x0, symName: _f_to_k, symObjAddr: 0x3E0, symBinAddr: 0x100003A78, symSize: 0x28 }
-  - { offsetInCU: 0x133, offset: 0x133, size: 0x8, addend: 0x0, symName: _k_to_c, symObjAddr: 0x408, symBinAddr: 0x100003AA0, symSize: 0x28 }
-  - { offsetInCU: 0x15B, offset: 0x15B, size: 0x8, addend: 0x0, symName: _k_to_f, symObjAddr: 0x430, symBinAddr: 0x100003AC8, symSize: 0x28 }
-  - { offsetInCU: 0x183, offset: 0x183, size: 0x8, addend: 0x0, symName: _categorize_temperature, symObjAddr: 0x458, symBinAddr: 0x100003AF0, symSize: 0x174 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003694, symSize: 0x34C }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003694, symSize: 0x34C }
+  - { offsetInCU: 0x93, offset: 0x93, size: 0x8, addend: 0x0, symName: _c_to_f, symObjAddr: 0x34C, symBinAddr: 0x1000039E0, symSize: 0x38 }
+  - { offsetInCU: 0xBB, offset: 0xBB, size: 0x8, addend: 0x0, symName: _c_to_k, symObjAddr: 0x384, symBinAddr: 0x100003A18, symSize: 0x28 }
+  - { offsetInCU: 0xE3, offset: 0xE3, size: 0x8, addend: 0x0, symName: _f_to_c, symObjAddr: 0x3AC, symBinAddr: 0x100003A40, symSize: 0x38 }
+  - { offsetInCU: 0x10B, offset: 0x10B, size: 0x8, addend: 0x0, symName: _f_to_k, symObjAddr: 0x3E4, symBinAddr: 0x100003A78, symSize: 0x28 }
+  - { offsetInCU: 0x133, offset: 0x133, size: 0x8, addend: 0x0, symName: _k_to_c, symObjAddr: 0x40C, symBinAddr: 0x100003AA0, symSize: 0x28 }
+  - { offsetInCU: 0x15B, offset: 0x15B, size: 0x8, addend: 0x0, symName: _k_to_f, symObjAddr: 0x434, symBinAddr: 0x100003AC8, symSize: 0x28 }
+  - { offsetInCU: 0x183, offset: 0x183, size: 0x8, addend: 0x0, symName: _categorize_temperature, symObjAddr: 0x45C, symBinAddr: 0x100003AF0, symSize: 0x174 }
 ...

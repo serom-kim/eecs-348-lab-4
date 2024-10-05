@@ -12,74 +12,76 @@ void categorize_temperature(float celsius);
 int main() {
     float input_temp, converted_temp;
     int in_scale, out_scale;
-
-    printf("Enter the temperature: "); //user temperature
-    scanf("%f", &input_temp);
-
-    printf("Choose the current scale: (1) Celsius, (2) Fahrenheit, (3) Kelvin: "); //user scale
-    scanf("%d", &in_scale);
-
-    printf("Convert to (1) Celsius, (2) Fahrenheit, (3) Kelvin: "); //user conversion scale
-    scanf("%d", &out_scale);
-
-    if (in_scale == out_scale) { //checking input validity
-        printf("Conversion not available. Please use differing scales.\n");
-        exit(1);
-    }
-
-    if (in_scale == 3 && input_temp < 0) { // kelvin input validation 
-        printf("Choose a different temperature. Kelvin cannot be negative.\n");
-        exit(1);
-    }
-
-    switch(in_scale) { 
-        case 1: //if user inputs celsius
-            if (out_scale == 2)
-                converted_temp = c_to_f(input_temp);
-            else if (out_scale == 3)
-                converted_temp = c_to_k(input_temp);
-            break;
+    while(1){
         
-        case 2: // if user inputs fahrenheit
-            if (out_scale == 1)
-                converted_temp = f_to_c(input_temp);
-            else if (out_scale == 3)
-                converted_temp = f_to_k(input_temp);
-            break;
-        
-        case 3: // if user inputs kelvin
-            if (out_scale == 1)
-                converted_temp = k_to_c(input_temp);
-            else if (out_scale == 2)
-                converted_temp = k_to_f(input_temp);
-            break;
-        
-        default:
-            printf("Invalid scale.\n");
-            exit(1);
-    }
+        printf("Enter the temperature: "); //user temperature
+        scanf("%f", &input_temp);
 
-    switch(out_scale) { //showing the converted temperatures
-        case 1:
-            printf("Converted temp: %.2fC\n", converted_temp); // celsius conversion
-            break;
-        case 2:
-            printf("Converted temp: %.2fF\n", converted_temp); // fahrenheit conversion
-            break;
-        case 3:
-            printf("Converted temp: %.2fK\n", converted_temp); // kelvin conversion
-            break;
-    }
+        printf("Choose the current scale: (1) Celsius, (2) Fahrenheit, (3) Kelvin: "); //user scale
+        scanf("%d", &in_scale);
 
-    if (out_scale == 1) { // categorizing temperatures
-        categorize_temperature(converted_temp);
-    } else if (out_scale == 2) {
-        categorize_temperature(f_to_c(converted_temp));
-    } else if (out_scale == 3) {
-        categorize_temperature(k_to_c(converted_temp));
-    }
+        printf("Convert to (1) Celsius, (2) Fahrenheit, (3) Kelvin: "); //user conversion scale
+        scanf("%d", &out_scale);
 
-    return 0;
+        if (in_scale == out_scale) { //checking input validity
+            printf("Conversion not available. Please use differing scales.\n");
+            continue;
+        }
+
+        if (in_scale == 3 && input_temp < 0) { // kelvin input validation 
+            printf("Choose a different temperature. Kelvin cannot be negative.\n");
+            continue;
+        }
+
+        switch(in_scale) { 
+            case 1: //if user inputs celsius
+                if (out_scale == 2)
+                    converted_temp = c_to_f(input_temp);
+                else if (out_scale == 3)
+                    converted_temp = c_to_k(input_temp);
+                break;
+            
+            case 2: // if user inputs fahrenheit
+                if (out_scale == 1)
+                    converted_temp = f_to_c(input_temp);
+                else if (out_scale == 3)
+                    converted_temp = f_to_k(input_temp);
+                break;
+            
+            case 3: // if user inputs kelvin
+                if (out_scale == 1)
+                    converted_temp = k_to_c(input_temp);
+                else if (out_scale == 2)
+                    converted_temp = k_to_f(input_temp);
+                break;
+            
+            default:
+                printf("Invalid scale.\n");
+                continue;
+        }
+
+        switch(out_scale) { //showing the converted temperatures
+            case 1:
+                printf("Converted temp: %.2fC\n", converted_temp); // celsius conversion
+                break;
+            case 2:
+                printf("Converted temp: %.2fF\n", converted_temp); // fahrenheit conversion
+                break;
+            case 3:
+                printf("Converted temp: %.2fK\n", converted_temp); // kelvin conversion
+                break;
+        }
+
+        if (out_scale == 1) { // categorizing temperatures
+            categorize_temperature(converted_temp);
+        } else if (out_scale == 2) {
+            categorize_temperature(f_to_c(converted_temp));
+        } else if (out_scale == 3) {
+            categorize_temperature(k_to_c(converted_temp));
+        }
+
+        return 0;
+    }
 }
 // conversion formulas
 float c_to_f(float celsius) {
